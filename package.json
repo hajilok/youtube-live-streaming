@@ -1,0 +1,14 @@
+{
+  "name": "youtube-live-streaming",
+  "version": "1.0.0",
+  "description": "This is a simple node js code to create live streaming on YouTube 24/7 hours with ffempg",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
