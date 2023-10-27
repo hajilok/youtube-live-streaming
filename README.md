@@ -17,6 +17,7 @@ This is a simple node js code to create live streaming on YouTube 24/7 hours wit
 ## Deploy On 
 
 [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
 **If Need Depploy to render or any hosting using main.js file and edit  on line 7 for your video art  content like lofi girl and plz add your .env if you need to deploy on render or any hosting**
 
