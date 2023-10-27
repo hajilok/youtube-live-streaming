@@ -6,7 +6,7 @@ services:
     buildCommand: npm install
     startCommand: node main.js
     env:
-      - key: streamkey
+      - key: STREAM_KEY
         from: secret
         name: streamkey
     # Add other necessary configurations
