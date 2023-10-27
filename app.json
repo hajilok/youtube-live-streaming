@@ -1,7 +1,20 @@
 {
   "name": "youtube-live-streaming",
-  "description": "Livestreaming Youtube With Node js",
   "repository": "https://github.com/hajilok/youtube-live-streaming",
-  "logo": "https://node-js-sample-1234567890ab.herokuapp.com/node.png",
-  "keywords": ["node", "express", "server"]
+  "env": {
+    "STREAM_KEY": {
+      "description": "Secret Stream Key from YouTube",
+      "required": true
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ],
+  "formation": {
+    "web": {
+      "quantity": 1
+    }
+  }
 }
