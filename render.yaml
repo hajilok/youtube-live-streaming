@@ -1,0 +1,16 @@
+# render.yaml
+
+services:
+  - name: youtube-live-streaming
+    type: worker
+    buildCommand: npm install
+    startCommand: node main.js
+    env:
+      - key: streamkey
+        from: secret
+        name: streamkey
+    # Add other necessary configurations
+
+secrets:
+  - name: streamkey
+    value: "<YOUR_SECRET_STREAM_KEY>"
