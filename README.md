@@ -5,14 +5,15 @@ This is a simple node js code to create live streaming on YouTube 24/7 hours wit
 
 ![proft livestream menggunakan node js](https://github.com/hajilok/youtube-live-streaming/assets/120608486/6e400904-89c3-4635-b685-01e3aa48f481)
 
-![profy lofi](https://github.com/hajilok/youtube-live-streaming/assets/120608486/e9e19a57-4b7a-4832-97c9-64ff1cec0afc)
+## In case I will try to deploy and run livestreaming  wit render 
+![in the case deply with render](https://github.com/hajilok/youtube-live-streaming/assets/120608486/9227bf97-0080-4e2b-9a61-20b351469272)
 
 
-# Is proof Live streaming with this Project with render hosting and run 24 hours nonstop if my render is not suck 😂
 
-**Link Live Youtube :** [https://www.youtube.com/watch?v=nbA9f66flZc](https://www.youtube.com/watch?v=nbA9f66flZc)
+## Is proof Live streaming with this Project with render hosting and run 24 hours nonstop if my render is not suck 😂
 
-![profy lofi](https://github.com/hajilok/youtube-live-streaming/assets/120608486/e9e19a57-4b7a-4832-97c9-64ff1cec0afc)
+**Link Live Youtube for result of this project :** [https://www.youtube.com/watch?v=nbA9f66flZc](https://www.youtube.com/watch?v=nbA9f66flZc)
+
 ## Deploy On 
 
 [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy)
