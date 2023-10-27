@@ -2,7 +2,7 @@
   "name": "youtube-live-streaming",
   "repository": "https://github.com/hajilok/youtube-live-streaming",
   "env": {
-    "STREAM_KEY": {
+    "streamkey": {
       "description": "Secret Stream Key from YouTube",
       "required": true
     }
