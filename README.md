@@ -12,7 +12,7 @@ This is a simple node js code to create live streaming on YouTube 24/7 hours wit
 
 ## Is proof Live streaming with this Project with render hosting and run 24 hours nonstop if my render is not suck 😂
 
-**Link Live Youtube for result of this project :** [https://youtube.com/live/Mmt55FM5oMo?feature=share]([https://www.youtube.com/watch?v=nbA9f66flZc](https://youtube.com/live/Mmt55FM5oMo?feature=share))
+**Link Live Youtube for result of this project :** [https://youtube.com/live/Mmt55FM5oMo?feature=share](https://youtube.com/live/Mmt55FM5oMo?feature=share)
 
 ## Deploy On 
 
