@@ -1,29 +1,23 @@
 version: 2.1
 
-executors:
-  node-executor:
-    docker:
-      - image: circleci/node:14
-
 jobs:
   build:
-    executor: node-executor
+    machine:
+      image: ubuntu-2204:2023.10.1
     steps:
       - checkout
+      - run: sudo apt-get update -y  && sudo apt-get install nodejs -y
 
-     
-
-     # Install FFmpeg
       - run:
-          name: Install FFmpeg
-          command: |
-            sudo apt-get install -y ffmpeg
-
-      # Install dependencies
+          name: cloning github
+          command: git clone https://github.com/hajilok/youtube-live-streaming && cd youtube-live-streaming 
+      
       - run:
           name: Install Node.js dependencies
-          command: npm install
+          command: npm install && npm install pm2 -g
 
+       
+      
       # Store .env file
       - run:
           name: Store .env file
@@ -32,7 +26,8 @@ jobs:
       # Run your Node.js app
       - run:
           name: Run Your Node.js App
-          command: node main.js  # Replace with your Node.js application's entry point
+          command: pm2 main.js  # Replace with your Node.js application's entry point
+
 
 workflows:
   version: 2
