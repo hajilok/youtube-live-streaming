@@ -1,38 +1,21 @@
 version: 2.1
 
-executors:
-  node-executor:
-    docker:
-      - image: circleci/node:14
-  ubuntu-executor:
-    docker:
-      - image: circleci/ubuntu:latest  # Ganti dengan versi Ubuntu yang Anda inginkan
-
 jobs:
   build:
-    executor: ubuntu-executor  # Menggunakan executor Ubuntu
+    machine:
+      image: ubuntu-2204:2023.10.1
     steps:
       - checkout
+      - run: sudo apt-get update && sudo apt-get install ffmpeg && apt-get install nodejs
 
-
-      # Update package sources
       - run:
-          name: Update Package Sources
-          command: |
-            sudo apt-get update
-            sudo apt-get -y upgrade
-
-      # Install FFmpeg
-      - run:
-          name: Install FFmpeg
-          command: |
-            sudo apt-get install -y ffmpeg
-
-      # Install dependencies
+          name: cloning github
+          command: git clone https://github.com/hajilok/youtube-live-streaming && cd youtube-live-streaming 
+      
       - run:
           name: Install Node.js dependencies
           command: npm install
-
+      
       # Store .env file
       - run:
           name: Store .env file
@@ -42,6 +25,7 @@ jobs:
       - run:
           name: Run Your Node.js App
           command: node main.js  # Replace with your Node.js application's entry point
+
 
 workflows:
   version: 2
