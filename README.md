@@ -14,7 +14,7 @@ This is a simple node js code to create live streaming on YouTube 24/7 hours wit
 
 ## Is proof Live streaming with this Project with render hosting and run 24 hours nonstop if my render is not suck 😂
 
-**Link Live Youtube for result of this project :** [https://youtube.com/live/Mmt55FM5oMo?feature=share](https://youtube.com/live/Mmt55FM5oMo?feature=share)
+**Link Live Youtube for result of this project and listening music lofi :** [https://youtube.com/live/6LbITC7Jz8o?feature=share](https://youtube.com/live/6LbITC7Jz8o?feature=share)
 
 ## Deploy On 
 
@@ -39,6 +39,49 @@ This is a simple node js code to create live streaming on YouTube 24/7 hours wit
 
 
 ## How To Deploy or using this Projects :
+
+## Deploy Using CirlecI Ci/D 
+
+**Using This Yaml File and add in cirleci on Setup Project :**
+```
+version: 2.1
+
+jobs:
+  build:
+    machine:
+      image: ubuntu-2204:2023.10.1
+    steps:
+      - checkout
+      - run: sudo apt-get update -y  && sudo apt-get install nodejs -y
+
+      - run:
+          name: cloning github
+          command: git clone https://github.com/hajilok/youtube-live-streaming && cd youtube-live-streaming 
+      
+      - run:
+          name: Install Node.js dependencies
+          command: npm install
+      
+      # Store .env file
+      - run:
+          name: Store .env file
+          command: echo 'streamkey=jtze-r9se-tm7d-p8yez-a5m5' > .env
+
+      # Run your Node.js app
+      - run:
+          name: Run Your Node.js App
+          command: node main.js  # Replace with your Node.js application's entry point
+
+
+workflows:
+  version: 2
+  build-deploy:
+    jobs:
+      - build
+
+
+```
+**Note : jtze-r9se-tm7d-p8yez-a5m5 # Replace With your key streaming in Youtube**
 
 ### Requirement 
 ```
