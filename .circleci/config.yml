@@ -6,8 +6,7 @@ jobs:
       image: ubuntu-2204:2023.10.1
     steps:
       - checkout
-      - run: sudo su -
-      - run: sudo apt-get update -y  && apt-get install nodejs -y
+      - run: sudo apt-get update -y  && sudo apt-get install nodejs -y
 
       - run:
           name: cloning github
