@@ -15,6 +15,10 @@ jobs:
       - run:
           name: Install Node.js dependencies
           command: npm install
+
+       - run:
+          name: Install pm2 dependencies
+          command: npm install pm2 -g
       
       # Store .env file
       - run:
@@ -24,7 +28,7 @@ jobs:
       # Run your Node.js app
       - run:
           name: Run Your Node.js App
-          command: node main.js  # Replace with your Node.js application's entry point
+          command: pm2 main.js  # Replace with your Node.js application's entry point
 
 
 workflows:
