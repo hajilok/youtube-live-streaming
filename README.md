@@ -3,16 +3,24 @@ This is a simple node js code to create live streaming on YouTube 24/7 hours wit
 
 ## Example in this case,  I Using Codespace on github For Start Livestream
 
+
 ![proft livestream menggunakan node js](https://github.com/hajilok/youtube-live-streaming/assets/120608486/6e400904-89c3-4635-b685-01e3aa48f481)
 
 ## In case I will try to deploy and run livestreaming  wit render 
 ![in the case deply with render](https://github.com/hajilok/youtube-live-streaming/assets/120608486/9227bf97-0080-4e2b-9a61-20b351469272)
 
-
+## in case  i using cirleci ci/D for streaming in my youtube channel 
+![cirleci streaming yt](https://github.com/hajilok/youtube-live-streaming/assets/120608486/ddcae854-6591-45d3-ad50-b50ec58eefa8)
 
 ## Is proof Live streaming with this Project with render hosting and run 24 hours nonstop if my render is not suck 😂
 
-**Link Live Youtube for result of this project :** [https://youtube.com/live/Mmt55FM5oMo?feature=share](https://youtube.com/live/Mmt55FM5oMo?feature=share)
+**Link Live Youtube for result of this project and listening music lofi :** _https://youtube.com/live/7zC4-4TBal0_
+
+**Tutorial How To Use and Deploy To Render Hosting** :
+
+**Click Link This :**
+
+_[https://www.youtube.com/watch?v=0oz94rCzf7A](https://www.youtube.com/watch?v=0oz94rCzf7A)_
 
 ## Deploy On 
 
@@ -36,7 +44,53 @@ This is a simple node js code to create live streaming on YouTube 24/7 hours wit
 **update command ffmpeg in vaiabel " command " with your command ffmpeg for better result and any content live streaming never working**
 
 
-## How To Deploy or using this Projects :
+# How To Deploy or using this Projects :
+
+## Deploy Using CirlecI Ci/D 
+
+**This A simple , Just Need too Fork this project and**
+**Copy this Yaml File and paste : :**
+```
+version: 2.1
+
+jobs:
+  build:
+    machine:
+      image: ubuntu-2204:2023.10.1
+    steps:
+      - checkout
+      - run: sudo apt-get update -y  && sudo apt-get install nodejs -y
+
+      - run:
+          name: cloning github
+          command: git clone https://github.com/hajilok/youtube-live-streaming && cd youtube-live-streaming 
+      
+      - run:
+          name: Install Node.js dependencies
+          command: npm install
+      
+      # Store .env file
+      - run:
+          name: Store .env file
+          command: echo 'streamkey=jtze-r9se-tm7d-p8yez-a5m5' > .env
+
+      # Run your Node.js app
+      - run:
+          name: Run Your Node.js App
+          command: node main.js  # Replace with your Node.js application's entry point
+
+
+workflows:
+  version: 2
+  build-deploy:
+    jobs:
+      - build
+
+
+```
+**Note : ```jtze-r9se-tm7d-p8yez-a5m5``` Replace With your key streaming in Youtube**
+
+## Deploy Manual on Your Os system
 
 ### Requirement 
 ```
@@ -44,7 +98,7 @@ ffmpeg
 node js with new version
 
 ```
-### How To Install and Using 
+**How To Install :**
 
 **Note : On build command on render or any hosting site using node main.js**
 
