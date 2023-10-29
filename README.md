@@ -12,6 +12,13 @@ This is a simple node js code to create live streaming on YouTube 24/7 hours wit
 ## in case  i using cirleci ci/D for streaming in my youtube channel 
 ![cirleci streaming yt](https://github.com/hajilok/youtube-live-streaming/assets/120608486/ddcae854-6591-45d3-ad50-b50ec58eefa8)
 
+## In case I Will Create Livestreaming Radio Ncs Song With Gitlab CI/CD
+
+![deploy with gitlab](https://github.com/hajilok/youtube-live-streaming/assets/120608486/0af8509b-9d60-4f26-a709-cade74639755)
+
+
+**Links Gitlab Repository :** _[https://gitlab.com/yukikatodo/youtube-live-streaming](https://gitlab.com/yukikatodo/youtube-live-streaming)_
+
 ## Is proof Live streaming with this Project with render hosting and run 24 hours nonstop if my render is not suck 😂
 
 **Link Live Youtube for result of this project and listening music lofi :** _https://youtube.com/live/7zC4-4TBal0_
