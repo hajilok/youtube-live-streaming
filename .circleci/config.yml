@@ -1,0 +1,40 @@
+version: 2.1
+
+executors:
+  node-executor:
+    docker:
+      - image: circleci/node:14
+
+jobs:
+  build:
+    executor: node-executor
+    steps:
+      - checkout
+
+      # Install FFmpeg
+      - run:
+          name: Install FFmpeg
+          command: |
+            sudo apt-get update
+            sudo apt-get install -y ffmpeg
+
+      # Install dependencies
+      - run:
+          name: Install Node.js dependencies
+          command: npm install
+
+      # Store .env file
+      - run:
+          name: Store .env file
+          command: echo 'streamkey=jwze-r9ss-tm7d-p8az-a5m5' > .env
+
+      # Run your Node.js app
+      - run:
+          name: Run Your Node.js App
+          command: node main.js  # Replace with your Node.js application's entry point
+
+workflows:
+  version: 2
+  build-deploy:
+    jobs:
+      - build
