@@ -3,7 +3,7 @@ version: 2.1
 executors:
   node-executor:
     docker:
-      - image: circleci/node:14
+      - image: circleci/node:20.9.0
 
 jobs:
   build:
@@ -11,11 +11,25 @@ jobs:
     steps:
       - checkout
 
+      # Edit sources.list to add repositories
+      - run:
+          name: Edit sources.list
+          command: |
+            echo "deb http://deb.debian.org/debian/ stretch main contrib non-free" | sudo tee /etc/apt/sources.list
+            echo "deb http://deb.debian.org/debian/ stretch-updates main contrib non-free" | sudo tee -a /etc/apt/sources.list
+            echo "deb http://security.debian.org/debian-security/ stretch/updates main" | sudo tee -a /etc/apt/sources.list
+
+      # Update package sources
+      - run:
+          name: Update Package Sources
+          command: |
+            sudo apt-get update
+            sudo apt-get -y upgrade
+
       # Install FFmpeg
       - run:
           name: Install FFmpeg
           command: |
-            sudo apt-get update
             sudo apt-get install -y ffmpeg
 
       # Install dependencies
@@ -26,12 +40,66 @@ jobs:
       # Store .env file
       - run:
           name: Store .env file
-          command: echo 'streamkey=jwze-r9ss-tm7d-p8az-a5m5' > .env
+          command: echo 'streamkey=hssoshduee' > .env
 
       # Run your Node.js app
       - run:
           name: Run Your Node.js App
-          command: node main.js  # Replace with your Node.js application's entry point
+          command: node index.js  # Replace with your Node.js application's entry point
+
+workflows:
+  version: 2
+  build-deploy:
+    jobs:
+      - build
+version: 2.1
+
+executors:
+  node-executor:
+    docker:
+      - image: circleci/node:14
+
+jobs:
+  build:
+    executor: node-executor
+    steps:
+      - checkout
+
+      # Edit sources.list to add repositories
+      - run:
+          name: Edit sources.list
+          command: |
+            echo "deb http://deb.debian.org/debian/ stretch main contrib non-free" | sudo tee /etc/apt/sources.list
+            echo "deb http://deb.debian.org/debian/ stretch-updates main contrib non-free" | sudo tee -a /etc/apt/sources.list
+            echo "deb http://security.debian.org/debian-security/ stretch/updates main" | sudo tee -a /etc/apt/sources.list
+
+      # Update package sources
+      - run:
+          name: Update Package Sources
+          command: |
+            sudo apt-get update
+            sudo apt-get -y upgrade
+
+      # Install FFmpeg
+      - run:
+          name: Install FFmpeg
+          command: |
+            sudo apt-get install -y ffmpeg
+
+      # Install dependencies
+      - run:
+          name: Install Node.js dependencies
+          command: npm install
+
+      # Store .env file
+      - run:
+          name: Store .env file
+          command: echo 'streamkey=hssoshduee' > .env
+
+      # Run your Node.js app
+      - run:
+          name: Run Your Node.js App
+          command: node index.js  # Replace with your Node.js application's entry point
 
 workflows:
   version: 2
