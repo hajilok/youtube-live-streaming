@@ -10,7 +10,7 @@ const video = await rl.question('Send Your filename video ?  ? ( Example : video
 const audio = "https://stream.zeno.fm/0r0xa792kwzuv";
 
 
-const command = `ffmpeg -stream_loop -1 -re -i ${video} -stream_loop -1 -re -i ${audio} -vcodec libx264 -pix_fmt yuvj420p -maxrate 2048k -preset ultrafast -r 12 -framerate 1 -g 50 -crf 51 -c:a aac -b:a 128k -ar 44100 -strict experimental -video_track_timescale 100 -b:v 1500k -f flv  rtmp://a.rtmp.youtube.com/live2/${streamkey}
+const command = `ffmpeg -stream_loop -1 -re -i ${video} -correct_ts_overflow -stream_loop -1 -re -i ${audio} -vcodec libx264 -pix_fmt yuvj420p -maxrate 2048k -preset ultrafast -r 12 -framerate 1 -g 50 -crf 51 -c:a aac -b:a 128k -ar 44100 -strict experimental -video_track_timescale 100 -b:v 1500k -f flv  rtmp://a.rtmp.youtube.com/live2/${streamkey}
 `;
 
 exec(command, { maxBuffer: 1024 * 1024 * 10 }, (error, stdout, stderr) => {
