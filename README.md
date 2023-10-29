@@ -38,11 +38,12 @@ This is a simple node js code to create live streaming on YouTube 24/7 hours wit
 **update command ffmpeg in vaiabel " command " with your command ffmpeg for better result and any content live streaming never working**
 
 
-## How To Deploy or using this Projects :
+# How To Deploy or using this Projects :
 
 ## Deploy Using CirlecI Ci/D 
 
-**Using This Yaml File and add in cirleci on Setup Project :**
+**This A simple , Just Need too Fork this project and**
+**Copy this Yaml File and paste : :**
 ```
 version: 2.1
 
@@ -81,7 +82,9 @@ workflows:
 
 
 ```
-**Note : jtze-r9se-tm7d-p8yez-a5m5 # Replace With your key streaming in Youtube**
+**Note : ```jtze-r9se-tm7d-p8yez-a5m5``` Replace With your key streaming in Youtube**
+
+## Deploy Manual on Your Os system
 
 ### Requirement 
 ```
@@ -89,7 +92,7 @@ ffmpeg
 node js with new version
 
 ```
-### How To Install and Using 
+**How To Install :**
 
 **Note : On build command on render or any hosting site using node main.js**
 
