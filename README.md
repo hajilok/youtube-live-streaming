@@ -16,9 +16,6 @@ This is a simple node js code to create live streaming on YouTube 24/7 hours wit
 
 ![deploy with gitlab](https://github.com/hajilok/youtube-live-streaming/assets/120608486/0af8509b-9d60-4f26-a709-cade74639755)
 
-
-**Links Gitlab Repository :** _[https://gitlab.com/yukikatodo/youtube-live-streaming](https://gitlab.com/yukikatodo/youtube-live-streaming)_
-
 ## Is proof Live streaming with this Project with render hosting and run 24 hours nonstop if my render is not suck 😂
 
 **Link Live Youtube for result of this project and listening music lofi :** _https://youtube.com/live/7zC4-4TBal0_
@@ -96,6 +93,37 @@ workflows:
 
 ```
 **Note : ```jtze-r9se-tm7d-p8yez-a5m5``` Replace With your key streaming in Youtube**
+
+## Deploy With Gitlab CI/CD :
+
+ **This A simple , Fork My Gitlab Repository and Copy This Yaml File and Paste to Editor Pipeline**
+ 
+ **Links Gitlab Repository :** _[https://gitlab.com/yukikatodo/youtube-live-streaming](https://gitlab.com/yukikatodo/youtube-live-streaming)_
+
+ ```
+ stages:
+  - build
+
+variables:
+  STREAM_KEY: jwze-r5ss-tm8d-p0az-a5d3
+
+before_script:
+  - apt-get update -y
+  - apt-get install -y ffmpeg
+  - apt-get install -y nodejs
+  - apt-get install -y npm
+  - npm install
+
+
+build:
+  stage: build
+  script:
+    - echo "streamkey=$STREAM_KEY" > .env
+    - node main.js
+
+ ```
+
+**In Variabels Stream Key Replace with Your streamkey in youtube**
 
 ## Deploy Manual on Your Os system
 
