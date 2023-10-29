@@ -4,16 +4,25 @@ executors:
   node-executor:
     docker:
       - image: circleci/node:14
+  ubuntu-executor:
+    docker:
+      - image: circleci/ubuntu:latest  # Ganti dengan versi Ubuntu yang Anda inginkan
 
 jobs:
   build:
-    executor: node-executor
+    executor: ubuntu-executor  # Menggunakan executor Ubuntu
     steps:
       - checkout
 
-     
 
-     # Install FFmpeg
+      # Update package sources
+      - run:
+          name: Update Package Sources
+          command: |
+            sudo apt-get update
+            sudo apt-get -y upgrade
+
+      # Install FFmpeg
       - run:
           name: Install FFmpeg
           command: |
