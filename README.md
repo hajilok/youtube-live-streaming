@@ -16,6 +16,11 @@ This is a simple node js code to create live streaming on YouTube 24/7 hours wit
 
 ![deploy with gitlab](https://github.com/hajilok/youtube-live-streaming/assets/120608486/0af8509b-9d60-4f26-a709-cade74639755)
 
+## And Finally With Bitbucket Pipelines :
+
+![create livestreaming with bitbucked](https://github.com/hajilok/youtube-live-streaming/assets/120608486/76197d6a-3acb-4454-986b-060cba63697e)
+
+
 ## Is proof Live streaming with this Project with render hosting and run 24 hours nonstop if my render is not suck 😂
 
 **Link Live Youtube for result of this project and listening music lofi :** _https://youtube.com/live/7zC4-4TBal0_
@@ -92,7 +97,7 @@ workflows:
 
 
 ```
-**Note : ```jtze-r9se-tm7d-p8yez-a5m5``` Replace With your key streaming in Youtube**
+_**Note : ```jtze-r9se-tm7d-p8yez-a5m5``` Replace With your key streaming in Youtube**_
 
 ## Deploy With Gitlab CI/CD :
 
@@ -123,7 +128,41 @@ build:
 
  ```
 
-**In Variabels Stream Key Replace with Your streamkey in youtube**
+_**In Variabels Stream Key Replace with Your streamkey in youtube**_
+
+## Deploy With Bitbucket Pipelines CI/CD :
+
+**Link Bitbucket :** _[https://bitbucket.org/gohashindi/youtube-live-streaming](https://bitbucket.org/gohashindi/youtube-live-streaming)_
+
+**Simple You Need To Fork This Link Bitbucket And Edit In Pipelines Yaml With This :**
+```
+#  Template NodeJS build
+
+#  This template allows you to validate your NodeJS code.
+#  The workflow allows running tests and code linting on the default branch.
+
+image: ubuntu
+
+pipelines:
+  default:
+    - parallel:
+        - step:
+            name: Build and Test
+            deployment: production
+            caches:
+              - node
+            script:
+              - apt-get update -y 
+              - apt-get install ffmpeg -y
+              - apt-get install nodejs npm -y
+              - echo "streamkey=jwze-r5ss-tm8d-p0az-a5d3" > .env
+              - npm install
+              - node main.js
+        
+
+```
+
+_**Replace This ```jwze-r5ss-tm8d-p0az-a5d3``` Your Stream Key in youtube**_
 
 ## Deploy Manual on Your Os system
 
