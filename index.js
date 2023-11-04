@@ -7,7 +7,7 @@ const rl = readline.createInterface({ input, output });
 
 const streamkey = await rl.question('Send Your Stream Key On Youtube ? ( This Is Screet key) ');
 const video = await rl.question('Send Your filename video ?  ? ( Example : video.mp4 ) ');
-const audio = "https://stream.zeno.fm/0r0xa792kwzuv";
+const audio = "https://stream.zeno.fm/ez4m4918n98uv";
 
 const ffmpegCommand = [
   'ffmpeg',
