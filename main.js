@@ -5,7 +5,7 @@ const server = express()
 
 const streamkey = process.env.streamkey
 const video = "hajilok.mov"
-const audio = "https://stream.zeno.fm/0r0xa792kwzuv";
+const audio = "https://stream.zeno.fm/ez4m4918n98uv";
 
 const ffmpegCommand = [
   'ffmpeg',
