@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "type": "module",
   "description": "This is a simple node js code to create live streaming on YouTube 24/7 hours with ffempg",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
