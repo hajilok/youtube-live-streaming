@@ -1,3 +1,5 @@
+[![Publish package nodejs](https://github.com/hajilok/youtube-live-streaming/actions/workflows/npm-publish.yml/badge.svg?event=check_run)](https://github.com/hajilok/youtube-live-streaming/actions/workflows/npm-publish.yml)
+
 # youtube-live-streaming
 This is a simple node js code to create live streaming on YouTube 24/7 hours with ffempg
 
