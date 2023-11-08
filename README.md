@@ -3,6 +3,46 @@
 # youtube-live-streaming
 This is a simple node js code to create live streaming on YouTube 24/7 hours with ffempg
 
+# Using NPM for simple and dev any code
+![using npm js](https://github.com/hajilok/youtube-live-streaming/assets/120608486/456842fb-7df6-4114-a4a3-de46b4aedaf9)
+
+**Just Need To Install Modules ffmpeg and enjoy with simple command :**
+
+```
+npm i youtube-live-streaming
+```
+**Simple Code :**
+
+```
+import youtube from "youtube-live-streaming";
+
+const api = "jwze-rrs-tmwd-pwaz-a5m5"; //change with your streamkey
+const video = "hajilok.mov"; //change with your video file name or video link 
+const audio = "https://stream.zeno.fm/ez4m4918n98uv"; //change with your mp3 link or audio file name  
+
+youtube(api, video, audio);
+```
+**or**
+
+```
+import youtube from "youtube-live-streaming";
+
+const data = {
+   api: "jwze-rrs-tmwd-pwaz-a5m5",
+   video: "hajilok.mov",
+   audio: "https://stream.zeno.fm/ez4m4918n98uv",
+}
+
+youtube(data.api, data.video, data.audio);
+```
+**Note :**
+_if not working or show any error plz ignore , check in youtube for your livestreaming is working or not because is module need any developetment , you can contribute with me_
+
+_plz install express js and ffmpeg in your sistem if need using this module_
+
+Link Github :_[ https://github.com/hajilok/youtube-live-streaming](https://github.com/hajilok/youtube-live-streaming)_
+
+
 ## Example in this case,  I Using Codespace on github For Start Livestream
 
 
