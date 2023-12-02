@@ -8,10 +8,26 @@ This is a simple node js code to create live streaming on YouTube 24/7 hours wit
 
 **Just Need To Install Modules ffmpeg and enjoy with simple command :**
 
+Npmjs : [https://www.npmjs.com/package/youtube-live-streaming](https://www.npmjs.com/package/youtube-live-streaming)
+
+**Firts one :**
+```
+sudo apt update
+sudo apt install ffmpeg
+```
+**Step 2 :**
+
+**Install Node js**
+
+```
+curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash - && sudo apt-get install -y nodejs
+```
+**Create file  ```index.mjs``` And Install module using this In terminal :**
+
 ```
 npm i youtube-live-streaming
 ```
-**Simple Code :**
+**And Paste This Simple Code  to your File  ```index.mjs``` :**
 
 ```
 import youtube from "youtube-live-streaming";
@@ -35,6 +51,9 @@ const data = {
 
 youtube(data.api, data.video, data.audio);
 ```
+
+**Save You file and run in terminal with ```node index.mjs```**
+
 **Note :**
 _if not working or show any error plz ignore , check in youtube for your livestreaming is working or not because is module need any developetment , you can contribute with me_
 
@@ -65,11 +84,11 @@ Link Github :_[ https://github.com/hajilok/youtube-live-streaming](https://githu
 
 ## Is proof Live streaming with this Project with render hosting and run 24 hours nonstop if my render is not suck 😂
 
-**Link Live Youtube for result of this project and listening music ncs  :** _[https://youtube.com/live/KVCu01BaBbY?feature=share](https://youtube.com/live/KVCu01BaBbY?feature=share)_
+**Link Live Youtube for result of this project and listening music ncs  :** [https://www.youtube.com/live/PfrvJBagIUc?si=LnTiU2CAAoo8LonV](https://www.youtube.com/live/PfrvJBagIUc?si=LnTiU2CAAoo8LonV)
 
 **Tutorial How To Use and Deploy To Render Hosting** :
 
-**Click Link This :**
+**Clichttps://www.youtube.com/live/PfrvJBagIUc?si=LnTiU2CAAoo8LonVhttps://www.youtube.com/live/PfrvJBagIUc?si=LnTiU2CAAoo8LonVk Link This :**
 
 _[https://www.youtube.com/watch?v=0oz94rCzf7A](https://www.youtube.com/watch?v=0oz94rCzf7A)_
 
