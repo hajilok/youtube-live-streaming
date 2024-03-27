@@ -1,5 +1,5 @@
-import express from 'express'
-import { spawn } from 'child_process'
+const express = require('express');
+const { spawn } = require('child_process');
 const server = express()
 
 const youtube = (apikey, video, audio) => {
@@ -61,6 +61,4 @@ const youtube = (apikey, video, audio) => {
 // const video = "hajilok.mov"
 // const audio = "https://stream.zeno.fm/ez4m4918n98uv";
 
-
-
-export default youtube
+module.exports = youtube

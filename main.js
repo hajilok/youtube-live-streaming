@@ -1,6 +1,6 @@
-import express from 'express'
-import { spawn } from 'child_process'
-import 'dotenv/config';
+const express = require('express');
+const { spawn } = require('child_process');
+require('dotenv').config()
 const server = express()
 
 const streamkey = process.env.streamkey
