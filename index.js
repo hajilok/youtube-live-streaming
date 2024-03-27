@@ -1,7 +1,7 @@
-import express from 'express'
-import { spawn } from 'child_process'
-import * as readline from 'node:readline/promises';
-import { stdin as input, stdout as output } from 'node:process';
+const express = require('express');
+const { spawn } = require('child_process');
+const readline = require('node:readline/promises');
+const { stdin: input, stdout: output } = require('node:process');
 const server = express()
 const rl = readline.createInterface({ input, output });
 
